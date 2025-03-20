@@ -1,5 +1,8 @@
 **Bluetooth Navigation and Digital Rally Roadbook Controller**
 
+This README is out of date. It describe the original function coded by Thomas Styles, but most of it has been replaced in this fork. 
+I will publish an updated README soon.
+
 _Thomas Styles / S.R.I. / Styles Rally Industries_
 
 ![Functions](https://github.com/StylesRallyIndustries/RallyController/assets/137459771/d772f6fb-78da-4c4b-a881-a0dc21712cc2)
