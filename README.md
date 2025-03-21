@@ -18,6 +18,8 @@ https://www.thingiverse.com/stylesrallyindustries/designs
 
 ## Software
 
+![DMD2 button demo](https://github.com/MarinOlivier/RallyController/blob/main/doc/src/DMD2_RallyCtrlDemo.gif)
+
 The soft has been (almost completely) re-writen to match my needs :
 * Button 1
   * quick press -> one-step zoom in
@@ -34,7 +36,7 @@ The soft has been (almost completely) re-writen to match my needs :
 
 In fact, the software only send commands to DMD2 and you need to configure in DMD2 each behaviours like this :
 
-![DMD2 Remote configuration 1](https://example.com/chemin-vers-votre-image.gif)
+![DMD2 Remote configuration 1](https://github.com/MarinOlivier/RallyController/blob/main/doc/src/dmd2_remotectrl_settings_1.png)
 
-![DMD2 Remote configuration 2](https://example.com/chemin-vers-votre-image.gif)
+![DMD2 Remote configuration 2](https://github.com/MarinOlivier/RallyController/blob/main/doc/src/dmd2_remotectrl_settings_2.png)
 
