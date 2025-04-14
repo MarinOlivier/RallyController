@@ -5,6 +5,7 @@
 #include <BleKeyboard.h>  // For Bluetooth Keyboard functionality
 #include <Bounce2.h>      // For button debounce
 
+
 // Configuration Bluetooth
 #define DEVICE_NAME "RCntrl P.1"
 #define DEVICE_MANUFACTURER "S.R.I."
@@ -35,24 +36,17 @@ const unsigned long repeatInterval = 200;          // Interval for repeated acti
 // Global Variables
 bool toggle_mode = false;
 
-// Change the Bluetooth device name based on mode
-void Toggle_Name() {
-  if (toggle_mode) {
-    esp_ble_gap_set_device_name("RCntrl P.2");
-    Serial.println("* Profile 2 activated *");
-  } else {
-    esp_ble_gap_set_device_name("RCntrl P.1");
-    Serial.println("* Profile 1 activated *");
-  }
-}
-
 // Device setup
 void setup() {
   Serial.begin(115200);
   Serial.println("Starting Rally Controller...");
 
   // Initialize Bluetooth keyboard
+  
+  //nvs_flash_erase();     // Efface les données NVS
+  //nvs_flash_init();      // Réinitialise la mémoire NVS
   bleKeyboard.begin();
+  delay(2000); // Assurez-vous que les services moutables soient bien publiés
   Serial.println("Bluetooth keyboard ready!");
 
   // Configure buttons with pull-up resistors and debounce interval
@@ -65,15 +59,6 @@ void setup() {
 
 // Main loop
 void loop() {
-  // Check if Button1 and Button4 are pressed together to change mode
-  // if ((digitalRead(Button1) == LOW) && (digitalRead(Button4) == LOW)) {
-  //   delay(5000);  // Wait 5 seconds
-  //   if ((digitalRead(Button1) == LOW) && (digitalRead(Button4) == LOW)) {
-  //     toggle_mode = !toggle_mode;  // Toggle mode
-  //     Toggle_Name();               // Update Bluetooth name
-  //     Serial.println("Mode changed!");
-  //   }
-  // }
 
   // Update the state of the buttons
   for (int i = 0; i < NUM_BUTTONS; i++) {
